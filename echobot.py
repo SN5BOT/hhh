@@ -22,8 +22,8 @@ for i in range(len(list_of_user)):
     list_of_user[i] = list_of_user[i][0]
 
 client = TelegramClient('echo', 
-    "appid",
-    "apphash").start(bot_token="токен") 
+    "17631893",
+    "dc04058d98e72212c2830ca092e01b09").start(bot_token="5139995455:AAE7cynO6IyucHsx8PXGMfcsvLALdDRSDx0") 
 
 client.parse_mode = 'html'
 def command(*args):
