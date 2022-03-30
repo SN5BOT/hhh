@@ -1,5 +1,5 @@
-from telethon import TelegramClient, events
-from telethon.tl.custom import Button
+from pyrogram import TelegramClient, events
+from pyrogram.types import Button
 import json
 from urllib.request import urlopen 
 from urllib.parse import urlencode
