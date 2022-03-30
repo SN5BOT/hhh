@@ -1,0 +1,16 @@
+{
+  "name": "🥲",
+  "description": "AI Chat bot with Affiliate Plus API",
+  "repository": "https://github.com/Bottom-T/Chat-Bot",
+  "env": {
+     "bot_token": {
+      "description": "Get your Bot token from @Botfather",
+      "value": ""
+    }
+   },
+   "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
