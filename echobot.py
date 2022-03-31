@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from pyrogram.types
+
 
 JESUS=Client(
     "Pyrogram Bot", 
