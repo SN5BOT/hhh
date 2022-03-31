@@ -32,7 +32,9 @@ async def start_message(bot, message):
 
     if query.data == "id":
         await query.answer()
-            reply_markup="Hello ",
+
+        await query.message.edit_text="hh",
+            reply_markup=("Hello ")
         disable_web_page_preview=True    
 
 BOTidSBot.run()
