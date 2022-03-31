@@ -13,7 +13,7 @@ async def start_message(bot, message):
     await message.reply_text(
         text="links",
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("Button1", url=f"t.me/us7a5"),
+            InlineKeyboardButton("Button1", callback_data="id"),
             InlineKeyboardButton("Button2", url=f"t.me/us7a5"),
             InlineKeyboardButton("Button3", url=f"t.me/us7a5")
             ],[
