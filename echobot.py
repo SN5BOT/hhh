@@ -3,10 +3,9 @@ from pyrogram import Client, filters
 
 JESUS=Client(
     "Pyrogram Bot", 
-    bot_token=getenv("BOT_TOKEN"), 
-    api_id=getenv("API_ID"), 
-    api_hash=getenv("API_HASH"))
-
+    bot_token="5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0", 
+    api_id="13472617", 
+    api_hash="deb30aa6abbfca7d4cdffaec397edbc1"
 )
 
 @JESUS.on_message(filters.command("start"))
