@@ -1,9 +1,9 @@
 {
-  "name": "yes",
+  "name": "Chat Bot",
   "description": "AI Chat bot with Affiliate Plus API",
   "repository": "https://github.com/Bottom-T/Chat-Bot",
   "logo": "https://telegra.ph/file/cee6b9c520057ccfe83e0.jpg",
-  "keywords": ["yes", "ai yes"],
+  "keywords": ["chatbot", "ai chatbot"],
   "env": {
      "BOT_TOKEN": {
       "description": "Get your Bot token from @Botfather",
