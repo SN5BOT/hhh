@@ -1,7 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
-from BOTidSBot.Translation import Translation
 
 BOTidSBot=Client(
     "Pyrogram Bot", 
