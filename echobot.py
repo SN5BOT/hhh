@@ -36,12 +36,18 @@ async def cb_handler(client, query):
     if query.data == "id":
         await query.answer()
         await query.message.edit_text(
-            Translation.ID_TEXT.format(query.from_user.id)
+            ID_TEXT.format(query.from_user.id)
         )
         return
 
     elif query.data == "close":
-        await query.message.delete()
 
+
+
+
+        await query.message.delete()
+    ID_TEXT = """
+🖤🥀 𝚈𝙾𝚄𝚁 𝚃𝙴𝙻𝙴𝚁𝙰𝙼 𝙸𝙳 𝙸𝚂 ➻ <code>{}</code>
+"""
 
 BOTidSBot.run()
