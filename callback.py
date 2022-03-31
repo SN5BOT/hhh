@@ -1,7 +1,7 @@
 from pyrogram import filters
-from pyrogram import Client as BOTidSBot
-from BOTidSBot.Translation import Translation
-from BOTidSBot.Config import Config
+from pyrogram import Client as bot
+from bot.Translation import Translation
+from bot.Config import Config
 
 BOT_USERNAME=Config.BOT_USERNAME
 
