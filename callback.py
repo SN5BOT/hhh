@@ -5,7 +5,7 @@ from bot.Config import Config
 
 BOT_USERNAME=Config.BOT_USERNAME
 
-@BOTidSBot.on_callback_query()
+@bot.on_callback_query()
 async def cb_handler(client, query):
 
     if query.data == "id":
