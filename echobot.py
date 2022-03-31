@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 
 
-@BOTidSBot.on_message(filters.command("start"))
+@bot.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_text(
         text="links",
@@ -22,4 +22,4 @@ async def start_message(bot, message):
         )
    
 
-BOTidSBot.run()
+bot.run()
