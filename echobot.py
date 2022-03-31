@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+import Updater, CommandHandler, CallbackQueryHandler
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 
@@ -9,30 +10,23 @@ BOTidSBot=Client(
     api_hash="deb30aa6abbfca7d4cdffaec397edbc1"
 )
 
-@BOTidSBot.on_message(filters.command("start"))
-async def start_message(bot, message):
-    await message.reply_text(
-        text="links",
-        reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("Button1", callback_data="id"),
-            InlineKeyboardButton("Button2", url=f"t.me/us7a5"),
-            InlineKeyboardButton("Button3", url=f"t.me/us7a5")
-            ],[
-            InlineKeyboardButton("Button4", url=f"t.me/us7a5")
-            ],[
-            InlineKeyboardButton("Button5", url=f"t.me/us7a5"),
-            InlineKeyboardButton("Button6", url=f"t.me/us7a5"),
-            InlineKeyboardButton("Button7", url=f"t.me/us7a5")
-            ]]
-            )
-        )
-   
+def start(bot, update):
+    a, b = randint(1, 100), randint(1, 100)
+    update.message.reply_text('{} + {} = ?'.format(a, b),
+        reply_markup = InlineKeyboardMarkup([[
+                InlineKeyboardButton(str(s), callback_data = '{} {} {}'.format(a, b, s)) for s in range(a + b - randint(1, 3), a + b + randint(1, 3))
+            ]]))
+
+def answer(bot, update):
+    a, b, s = [int(x) for x in update.callback_query.data.split()]
+    if a + b == s:
+        update.callback_query.edit_message_text('你答對了！')
+    else:
+        update.callback_query.edit_message_text('你答錯囉！')
 
 
+BOTidSBot.dispatcher.add_handler(CommandHandler('start', start))
+BOTidSBot.dispatcher.add_handler(CallbackQueryHandler(answer))
 
-    if query.data == "id":
-        await query.answer()
-
-        await query.message.edit_text(  
-            text= "Hello")
-BOTidSBot.run()
+BOTidSBot.start_polling()
+BOTidSBot.idle()
