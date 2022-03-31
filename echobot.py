@@ -29,7 +29,7 @@ async def chatbot(_, message):
     if message.text[0] == "/":
         return
 @bot.message_handler(func=lambda message:True)
-await name(message):
+def name(message):
     name = message.text
     design = pyfiglet.figlet_format(name)
     bot.send_message(message.chat.id,text=design)
