@@ -1,4 +1,5 @@
 from pyrogram import bot, filters
+from pyrogram import Client, filters
 from pyrogram.types
 import pyfiglet
 import telebot
