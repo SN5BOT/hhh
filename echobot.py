@@ -1,16 +1,10 @@
-
-from pyrogram.types
-import pyfiglet
-import telebot
-import requests
-
 from os import getenv
 from pyrogram import Client, filters
 from googletrans import Translator
 
 
-bot = Client("Chatbot", 
-                bot=getenv("telebot.TeleBot")
+bot = Client("yes", 
+                bot_token=getenv("BOT_TOKEN")
 
 tr = Translator()
 
