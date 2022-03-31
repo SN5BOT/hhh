@@ -1,7 +1,6 @@
 from pyrogram import TelegramClient, events
-from pyrogram.types import pyfiglet
-import json
-from time import time
+from pyrogram.types
+import pyfiglet
 import telebot
 
 bot = telebot.TeleBot ("5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0")
