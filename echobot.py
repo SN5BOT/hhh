@@ -1,4 +1,5 @@
 from pyrogram import TelegramClient, events
+from pyrogram import bot,filters
 from pyrogram.types
 import pyfiglet
 import telebot
