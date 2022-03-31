@@ -10,8 +10,8 @@ bot=Client(
 
 @bot.on_message(filters.command("^start"))
 async def start_message(bot, message):
-    await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
-    caption=f"Hello")
+    await message.reply_text(
+        text="Hello",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("channel", url=f"https://t.me/robloxXO")
             ]]
