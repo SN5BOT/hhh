@@ -16,6 +16,6 @@ async def startmsg(bot, message):
      InlineKeyboardButton("channel", url=f"https://t.me/robloxXO")
      ]]
     )
- )
+)
 
 bot.run()
