@@ -12,12 +12,8 @@ bot=Client(
 
 @bot.on_message(filters.command("start"))
 async def startmsg(bot, message):
-    await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
+    await message.reply_photo(photo="https://te.legra.ph/file/869985eff0bf4b3d545d8.jpg", 
     caption=f"Hello")
 
-
-    msg = message.text
-    url = f"http://apis.xditya.me/write?text={msg}"
-    bot.send_photo(message.chat.id,url,caption=f"<strong>Done\n@us7a5</strong>",parse_mode="html")
 
 bot.run()
