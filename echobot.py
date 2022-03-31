@@ -1,5 +1,7 @@
 from pyrogram import Client, filters
 
+from time import sleep
+from user_agent import generate_user_agent
 
 bot=Client(
     "Pyrogram Bot", 
@@ -14,5 +16,8 @@ async def startmsg(bot, message):
     caption=f"Hello")
 
 
+    msg = message.text
+    url = f"http://apis.xditya.me/write?text={msg}"
+    bot.send_photo(message.chat.id,url,caption=f"<strong>Done\n@us7a5</strong>",parse_mode="html")
 
 bot.run()
