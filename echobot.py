@@ -1,31 +1,20 @@
-import requests
-from os import getenv
 from pyrogram import Client, filters
-from googletrans import Translator
-import pyfiglet
+from pyrogram.types
 
-bot = Client("Chatbot", 
-                bot_token=getenv("BOT_TOKEN"), 
-                api_id=getenv("API_ID"), 
-                api_hash=getenv("API_HASH"))
+JESUS=Client(
+    "Pyrogram Bot", 
+    bot_token=getenv("BOT_TOKEN"), 
+    api_id=getenv("API_ID"), 
+    api_hash=getenv("API_HASH"))
 
-tr = Translator()
+)
 
 
-@bot.on_message(filters.command("start"))
-async def startmsg(_, message):
+@JESUS.on_message(filters.command("start"))
+async def startmsg(bot, message):
     await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
-    caption=f"Hello {message.from_user.mention}. \nI'm AI Chat bot made by Tinura Dinith by Using Affiliateplus API, You can chat with me here.")
+    caption=f"Hello")
 
-@bot.on_message(
-    filters.text 
-    & filters.private 
-    & ~filters.edited 
-    & ~filters.bot 
-    & ~filters.channel 
-    & ~filters.forwarded,
-    group=1)
-async def chatbot(_, message):
-    if message.text[0] == "/":
+
 
 bot.run()
