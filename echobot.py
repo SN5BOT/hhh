@@ -29,13 +29,10 @@ async def start_message(bot, message):
    
 
 
-@BOTidSBot.on_callback_query()
-async def cb_handler(client, query):
-    if query.data == "id":
-    await query.answer()
-    await query.message.edit_text("links")
-            
 
-        
+    if query.data == "id":
+        await query.answer()
+        await query.message.edit_text("links")
+        disable_web_page_preview=True    
 
 BOTidSBot.run()
