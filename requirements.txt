@@ -2,8 +2,4 @@ pyrogram
 tgcrypto
 pyfiglet
 requests
-user_agent
-generate_user_agent
-time
-sleep
 googletrans==3.1.0a0
