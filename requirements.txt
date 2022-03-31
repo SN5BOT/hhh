@@ -1,6 +1,4 @@
-asyncio
-time
-telebot
-pyTelegramBotAPI==3.8.2
-pyfiglet
+pyrogram
+tgcrypto
 requests
+googletrans==3.1.0a0
