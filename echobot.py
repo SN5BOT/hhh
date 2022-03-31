@@ -1,3 +1,5 @@
+import requests
+import pyfiglet
 from os import getenv
 from pyrogram import Client, filters
 from googletrans import Translator
