@@ -38,7 +38,6 @@ async def cb_handler(client, query):
         await query.answer()
         await query.message.edit_text(
             Translation.ID_TEXT.format(query.from_user.id)
-            disable_web_page_preview=True
         )
         return
 
