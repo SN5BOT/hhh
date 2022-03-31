@@ -10,12 +10,13 @@ bot=Client(
 
 @bot.on_message(filters.command("start"))
 async def startmsg(bot, message):
-    await message.reply_photo(photo="https://te.legra.ph/file/869985eff0bf4b3d545d8.jpg", 
-    caption=f"Hello")
-    reply_markup=InlineKeyboardMarkup( [[
-     InlineKeyboardButton("channel", url=f"https://t.me/robloxXO")
-     ]]
-    )
-)
+          reply_markup=InlineKeyboardMarkup( [[
+         InlineKeyboardButton("channel", url=f"https://t.me/robloxXO")
+         ]]
+       )
+   )
+
+    await message.reply_text("hello")
+    
 
 bot.run()
