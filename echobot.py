@@ -27,10 +27,5 @@ async def startmsg(_, message):
     group=1)
 async def chatbot(_, message):
     if message.text[0] == "/":
-        return
-@bot.message_handler(func=lambda message:True)
-def name(message):
-    name = message.text
-    design = pyfiglet.figlet_format(name)
-    bot.send_message(message.chat.id,text=design)
+
 bot.run()
