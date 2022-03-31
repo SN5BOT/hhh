@@ -2,4 +2,5 @@ pyrogram
 tgcrypto
 pyfiglet
 requests
+tyoes
 googletrans==3.1.0a0
