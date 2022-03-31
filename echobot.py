@@ -4,7 +4,7 @@ from googletrans import Translator
 
 
 bot = Client("chatbot", 
-                bot_token=getenv("BOT_TOKEN"))
+                bot_token=getenv("BOT_TOKEN")
 
 tr = Translator()
 
