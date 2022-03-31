@@ -32,7 +32,7 @@ async def start_message(bot, message):
 @BOTidSBot.on_callback_query()
 async def cb_handler(client, query):
     if query.data == "id":
-async def start_message(bot, message, query.from_user.id):
+async def start_message(bot, message):
     await message.reply_text("links {} ")
             
 
