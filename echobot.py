@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from googletrans import Translator
 
 
-bot = Client("yes", 
+bot = Client("chatbot", 
                 bot_token=getenv("BOT_TOKEN"))
 
 tr = Translator()
