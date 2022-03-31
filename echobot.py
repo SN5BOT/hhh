@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
-
+from pyrogram.tyoes import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.errors import UserNotParticipant
 bot=Client(
     "Pyrogram Bot", 
     bot_token="5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0", 
@@ -11,6 +12,10 @@ bot=Client(
 async def startmsg(bot, message):
     await message.reply_photo(photo="https://te.legra.ph/file/869985eff0bf4b3d545d8.jpg", 
     caption=f"Hello")
-
+    reply_markup=InlineKeyboardMarkup( [[
+     InlineKeyboardButton("channel", url=f"https://t.me/robloxXO")
+     ]]
+    )
+ )
 
 bot.run()
