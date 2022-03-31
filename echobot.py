@@ -1,8 +1,5 @@
 from pyrogram import Client, filters
 
-from time import sleep
-from user_agent import generate_user_agent
-
 bot=Client(
     "Pyrogram Bot", 
     bot_token="5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0", 
