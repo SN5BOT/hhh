@@ -1,8 +1,6 @@
 asyncio
 time
-urlencode
-urlopen
-json
-Button
-events
+telebot
+pyTelegramBotAPI==3.8.2
 pyfiglet
+requests
