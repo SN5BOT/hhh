@@ -1,7 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
-from BOTidSBot.Config import Config
 
 
 @BOTidSBot.on_message(filters.command("start"))
