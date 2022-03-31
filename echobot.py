@@ -1,14 +1,14 @@
 import requests
-import pyfiglet
 from os import getenv
 from pyrogram import Client, filters
 from googletrans import Translator
+import pyfiglet
 
-
-bot = Client("chatbot", 
-                bot_token=getenv("BOT_TOKEN"),
+bot = Client("Chatbot", 
+                bot_token=getenv("BOT_TOKEN"), 
                 api_id=getenv("API_ID"), 
                 api_hash=getenv("API_HASH"))
+
 tr = Translator()
 
 
