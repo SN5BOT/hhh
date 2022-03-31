@@ -6,7 +6,8 @@ BOTidSBot=Client(
     "Pyrogram Bot", 
     bot_token="5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0", 
     api_id="13472617", 
-    api_hash="deb30aa6abbfca7d4cdffaec397edbc1"
+    api_hash="deb30aa6abbfca7d4cdffaec397edbc1",
+    BOT_USERNAME="@S6nsbot"
 )
 
 @BOTidSBot.on_message(filters.command("start"))
@@ -27,5 +28,21 @@ async def start_message(bot, message):
             )
         )
    
+
+
+@BOTidSBot.on_callback_query()
+async def cb_handler(client, query):
+
+    if query.data == "id":
+        await query.answer()
+        await query.message.edit_text(
+            Translation.ID_TEXT.format(query.from_user.id)
+            disable_web_page_preview=True
+        )
+        return
+
+    elif query.data == "close":
+        await query.message.delete()
+
 
 BOTidSBot.run()
