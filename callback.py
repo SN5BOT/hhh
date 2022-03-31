@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram import Client as BOTidSBot
 from BOTidSBot.Translation import Translation
-from BOTidSBot.echobot import echobot
+from BOTidSBot.echobot.py import echobot.py
 
 BOT_USERNAME=Config.BOT_USERNAME
 
