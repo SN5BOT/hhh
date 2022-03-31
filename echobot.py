@@ -10,11 +10,11 @@ bot=Client(
 
 @bot.on_message(filters.command("start"))
 async def startmsg(bot, message):
-          reply_markup=InlineKeyboardMarkup( [[
-         InlineKeyboardButton("channel", url=f"https://t.me/robloxXO")
-         ]]
-       )
-  )
+                reply_markup=InlineKeyboardMarkup( [[
+               InlineKeyboardButton("channel", url=f"https://t.me/robloxXO")
+               ]]
+              )
+         )
 
     await message.reply_text("hello")
     
