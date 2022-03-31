@@ -4,14 +4,27 @@ from googletrans import Translator
 
 
 bot = Client("yes", 
-                bot_token=getenv("BOT_TOKEN")
+                bot_token=getenv("BOT_TOKEN"))
 
 tr = Translator()
 
 
 @bot.on_message(filters.command("start"))
 async def startmsg(_, message):
-    bot.send_message(message.chat.id,text=f'<b>Hi {message.from_user.first_name}\n- - - - - - - -\nWelcome To Terminal Name Bot\nSend Your Name To Make It\n- - - - - - - -\nBy : @Vodka_Tools</b>',parse_mode='html')
+    await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
+    caption=f"Hello {message.from_user.mention}. \nI'm AI Chat bot made by Tinura Dinith by Using Affiliateplus API, You can chat with me here.")
+
+@bot.on_message(
+    filters.text 
+    & filters.private 
+    & ~filters.edited 
+    & ~filters.bot 
+    & ~filters.channel 
+    & ~filters.forwarded,
+    group=1)
+async def chatbot(_, message):
+    if message.text[0] == "/":
+        return
 @bot.message_handler(func=lambda message:True)
 def name(message):
     name = message.text
