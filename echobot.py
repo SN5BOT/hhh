@@ -15,8 +15,8 @@ bot = Client("Chatbot",
 tr = Translator()
 
 
-@bot.message_handler(commands=['start'])
-def first_msg(message):
+@bot.on_message(filters.command("start"))
+async def startmsg(_, message):
     bot.send_message(message.chat.id,text=f'<b>Hi {message.from_user.first_name}\n- - - - - - - -\nWelcome To Terminal Name Bot\nSend Your Name To Make It\n- - - - - - - -\nBy : @Vodka_Tools</b>',parse_mode='html')
 @bot.message_handler(func=lambda message:True)
 def name(message):
