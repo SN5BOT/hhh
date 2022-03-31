@@ -31,22 +31,11 @@ async def start_message(bot, message):
 
 @BOTidSBot.on_callback_query()
 async def cb_handler(client, query):
-
     if query.data == "id":
-        await query.answer()
-        await query.message.edit_text(
-            ID_TEXT.format(query.from_user.id)
-        )
-        return
+async def start_message(bot, message, query.from_user.id):
+    await message.reply_text("links {} ")
+            
 
-    elif query.data == "close":
-
-
-
-
-        await query.message.delete()
-    ID_TEXT = """
-🖤🥀 𝚈𝙾𝚄𝚁 𝚃𝙴𝙻𝙴𝚁𝙰𝙼 𝙸𝙳 𝙸𝚂 ➻ <code>{}</code>
-"""
+        
 
 BOTidSBot.run()
