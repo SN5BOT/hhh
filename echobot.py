@@ -9,7 +9,6 @@ JESUS=Client(
 
 )
 
-
 @JESUS.on_message(filters.command("start"))
 async def startmsg(bot, message):
     await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
@@ -17,4 +16,4 @@ async def startmsg(bot, message):
 
 
 
-bot.run()
+JESUS()
