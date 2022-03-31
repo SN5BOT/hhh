@@ -5,15 +5,15 @@ from pyrogram.errors import UserNotParticipant
 
 BOTidSBot=Client(
     "Pyrogram Bot", 
-    bot_token="5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0", 
-    api_id="13472617", 
-    api_hash="deb30aa6abbfca7d4cdffaec397edbc1"
+    bot_token="******:AAGBIP8WByqCGeiO******XbjS_P1l7_0", 
+    api_id="*****7", 
+    api_hash="de******7d4cdffa*****edbc1"
 )
 
 @BOTidSBot.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_text(
-        text="♛ ︙ اختـر بـوت لاقـوم بـانشـائـة لك عـزيـزي",
+        text="links ♛",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Button1", url=f"t.me/us7a5"),
             InlineKeyboardButton("Button2", url=f"t.me/us7a5"),
