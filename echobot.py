@@ -2,12 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from BOTidSBot.Config import Config
-BOTidSBot=Client(
-    "Pyrogram Bot", 
-    bot_token="5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0", 
-    api_id="13472617", 
-    api_hash="deb30aa6abbfca7d4cdffaec397edbc1"
-)
+
 
 @BOTidSBot.on_message(filters.command("start"))
 async def start_message(bot, message):
