@@ -5,9 +5,9 @@ from pyrogram.errors import UserNotParticipant
 
 BOTidSBot=Client(
     "Pyrogram Bot", 
-    bot_token="******:AAGBIP8WByqCGeiO******XbjS_P1l7_0", 
-    api_id="*****7", 
-    api_hash="de******7d4cdffa*****edbc1"
+    bot_token="5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0", 
+    api_id="13472617", 
+    api_hash="deb30aa6abbfca7d4cdffaec397edbc1"
 )
 
 @BOTidSBot.on_message(filters.command("start"))
