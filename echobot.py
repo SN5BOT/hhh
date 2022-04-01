@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
-
+import random
 
 BOTidSBot=Client(
     "Pyrogram Bot", 
@@ -10,10 +10,16 @@ BOTidSBot=Client(
     api_hash="deb30aa6abbfca7d4cdffaec397edbc1"
 )
 
+ALL_PIC = [
+ "https://te.legra.ph/file/869985eff0bf4b3d545d8.jpg",
+ "https://te.legra.ph/file/579444763df09f4a59b6b.jpg",
+ "https://te.legra.ph/file/a6becafdb6bccfc0bc71e.mp4"
+]
+
 @BOTidSBot.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_photo(
-        photo="https://te.legra.ph/file/869985eff0bf4b3d545d8.jpg",
+        photo=random.choice(ALL_PIC)
         caption="Hello https://te.legra.ph/file/869985eff0bf4b3d545d8.jpg ",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Button1", url=f"t.me/us7a5"),
