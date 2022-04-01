@@ -19,7 +19,7 @@ ALL_PIC = [
 @BOTidSBot.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_photo(
-        photo=random.choice(ALL_PIC)
+        photo=random.choice(ALL_PIC),
         caption="Hello",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Button1", url=f"t.me/us7a5"),
