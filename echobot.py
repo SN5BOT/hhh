@@ -12,7 +12,10 @@ BOTidSBot=Client(
 
 ALL_PIC = [
  "https://te.legra.ph/file/869985eff0bf4b3d545d8.jpg",
- "https://te.legra.ph/file/579444763df09f4a59b6b.jpg",
+ "https://te.legra.ph/file/579444763df09f4a59b6b.jpg"
+]
+
+ALL_VIDEO = [
  "https://te.legra.ph/file/a6becafdb6bccfc0bc71e.mp4"
 ]
 
@@ -20,6 +23,8 @@ ALL_PIC = [
 async def start_message(bot, message):
     await message.reply_photo(
         photo=random.choice(ALL_PIC),
+    await message.reply_video(
+        video=random.choice(ALL_VIDEO),
         caption="Hello",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Button1", url=f"t.me/us7a5"),
