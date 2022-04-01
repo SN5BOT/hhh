@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 import random
 
-BOTidSBot=Client(
+YouTube=Client(
     "Pyrogram Bot", 
     bot_token="5131732775:AAGBIP8WByqCGeiO-bElbvc7XbjS_P1l7_0", 
     api_id="13472617", 
@@ -15,16 +15,13 @@ ALL_PIC = [
  "https://te.legra.ph/file/579444763df09f4a59b6b.jpg"
 ]
 
-ALL_VIDEO = [
- "https://te.legra.ph/file/a6becafdb6bccfc0bc71e.mp4"
-]
 
-@BOTidSBot.on_message(filters.command("start"))
+@YouTube.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_photo(
         photo=random.choice(ALL_PIC),
     await message.reply_video(
-        video=random.choice(ALL_VIDEO),
+        video="https://te.legra.ph/file/a6becafdb6bccfc0bc71e.mp4",
         caption="Hello",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Button1", url=f"t.me/us7a5"),
@@ -53,4 +50,4 @@ async def start_message(bot, message):
         )
    
 
-BOTidSBot.run()
+YouTube.run()
