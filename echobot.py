@@ -19,8 +19,8 @@ ALL_PIC = [
 
 @YouTube.on_message(filters.command("start"))
 async def start_message(bot, message):
-    await message.reply_photo_video(
-        photo, video=random.choice(ALL_PIC),
+    await message.reply_photo(
+        photo=random.choice(ALL_PIC),
         caption="Hello",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Button1", url=f"t.me/us7a5"),
